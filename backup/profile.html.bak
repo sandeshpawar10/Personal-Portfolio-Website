@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- photo section vertical left side image-->
+        <div class="photo animate">
+            <img src="image.png" alt="">
+        </div>
+
+        <!-- sandesh pawar name right side of picture with a huge a size in middle -->
+        <div class="user-card animate">
+            <h1 id="main-name">Sandesh Pawar</h1>
+            <!-- just below my name -->
+            <h4 id="passion">Backend Developer</h4> 
+            <a href="#" class="btn-download">Download Resume</a>
+        </div>
+
+        <!-- self information -->
+        <div class="self-card">
+            <!-- about should be below the name -->
+            <div class="about animate">
+                <h3 id="about-title">About Me</h3>
+                <p id="ab">   I am Sandesh Pawar and I am from Maharashtra. 
+                                Currently I am in 2nd year in CSE DEPARTMENT in BANGALORE INSTITUTE OF TECHNOLOGY 
+                                I am passionate about learning new things in the field of technology, especially programming and web development. 
+                                I have basic knowledge of C++, HTML, CSS, and JavaScript, and I enjoy practicing these skills through small projects and experiments. 
+                                I also participated in a hackathon project that aimed to help small businesses and artisans in India through technology, which helped me improve my teamwork and problem-solving skills. I always try to learn and grow every day so that I can achieve my goals and build a successful career in the IT field. I believe that with hard work and dedication, I can make a positive impact in the future.
+                              
+                </p>
+            </div>
+
+            <!-- skills part should be below the about -->
+            <div class="skils animate">
+                <h3 id="about-title">My Technical Skills</h3>
+                
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag c">c</h2> -->
+                        <button class="skill-tag c">C</button>
+                        <!-- <span class="skill-label">C</span> -->
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress c-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag cpp">C++</h2> -->
+                        <button class="skill-tag cpp">C++</button>
+                        <!-- <span class="skill-label">C++</span> -->
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress cpp-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag html">HTML</h2> -->
+                        <button class="skill-tag html">HTMl</button>
+                        <!-- <span class="skill-label">HTML</span> -->
+                        <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress html-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag css">CSS</h2> -->
+                        <button class="skill-tag css">CSS</button>
+                        <!-- <span class="skill-label">CSS</span> -->
+                        <span class="skill-percentage">50%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress css-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag js">JavaScript</h2> -->
+                        <button class="skill-tag js">JavaScript</button>
+                        <!-- <span class="skill-label">JavaScript</span> -->
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress javascript-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag node">Node Js</h2> -->
+                        <button class="skill-tag node">Node Js</button>
+                        <!-- <span class="skill-label">Node.js</span> -->
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress node-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <!-- <h2 class="skill-tag express">Express</h2> -->
+                        <button class="skill-tag express">Express</button>
+                        <!-- <span class="skill-label">Express</span> -->
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress exp-fill"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+            <!-- <div class="skils animate">
+                <h3 id="about-title">My Technical Skills</h3>
+                <h2 class="skill-tag cpp">C++</h2>
+                <h2 class="skill-tag c">c</h2>
+                <h2 class="skill-tag html">HTML</h2>
+                <h2 class="skill-tag css">CSS</h2>
+                <h2 class="skill-tag js">JavaScript</h2>
+                <h2 class="skill-tag node">Node Js</h2>
+                <h2 class="skill-tag express">Express</h2>
+            </div> -->
+
+            <div class="projects">
+                <h3 id="about-title">Projects</h3>
+                <!-- 1st project -->
+                <div class="main-project">
+                    <h3 id="project-name">LEETCODE MATRICS APP</h3>
+                    <h2 class="skill-tags html">HTML</h2>
+                    <h2 class="skill-tags css">CSS</h2>
+                    <h2 class="skill-tags js">JavaScript</h2>
+                    <p id="descriptio">LeetMatric is a JavaScript-based web application that fetches and visualizes a user’s LeetCode problem-solving statistics. It uses the LeetCode GraphQL API to display difficulty-wise progress (Easy, Medium, Hard) through interactive circular charts and submission summary cards. This project was built to gain hands-on experience with JavaScript, asynchronous programming, APIs, and frontend–backend interaction using Node.js and Express.</p>
+                    <a href="https://github.com/sandeshpawar10/LeetCode-Matrics-App" target="_blank" class="check-it-btn">Check it Out</a>
+                </div>
+
+                <!-- 2nd project -->
+
+                <div class="main-project">
+                    <h3 id="project-name">MOVIE SEARCH APP</h3>
+                    <h2 class="skill-tags html">HTML</h2>
+                    <h2 class="skill-tags css">CSS</h2>
+                    <h2 class="skill-tags js">JavaScript</h2>
+                    <p id="descriptio">The Movie Info Project is a web-based application built using HTML, CSS, and JavaScript that allows users to search for movies and view detailed information in real time. The app fetches data from the TMDB (The Movie Database) API and displays movie details such as title, poster, release date, rating, overview, director, and top cast members. It also includes filters for Hollywood and Bollywood (Indian regional movies), supports search by movie name and year, and provides smooth animations for a better user experience.</p>
+                    <a href="https://github.com/sandeshpawar10/Movie-Info-Project" target="_blank" class="check-it-btn">Check it Out</a>
+                </div>
+
+                <!-- 3rd project -->
+
+                <div class="main-project">
+                    <h3 id="project-name">BOOKSTORE API DRIZZLE</h3>
+                    <h2 class="skill-tags node">Node js</h2>
+                    <h2 class="skill-tags express">Express</h2>
+                    <p id="descriptio">The Bookstore REST API is a backend application built using Node.js, Express, Drizzle ORM, and PostgreSQL, designed to manage books and authors with proper relational database principles. The project implements UUID-based primary keys, foreign key relationships, and referential integrity, ensuring that every book is associated with a valid author.</p>
+                    <a href="https://github.com/sandeshpawar10/Bookstore-Api-Drizzle-Project/tree/main" target="_blank" class="check-it-btn">Check it Out</a>
+                </div>
+
+                <!-- 4th project -->
+                 <div class="main-project">
+                    <h3 id="project-name">URL SHORTNER PROJECT</h3>
+                    <h2 class="skill-tags html">Node Js</h2>
+                    <h2 class="skill-tags css">Express</h2>
+                    <h2 class="skill-tags PostgreSQL">PostgreSQL</h2>
+                    <h2 class="skill-tags Docker">Docker</h2>
+                    <h2 class="skill-tags Validators">Zod Validators</h2>
+                    <h2 class="skill-tags Drizzle">Drizzle ORM</h2>
+                    <p id="descriptio">I developed a production-ready URL Shortener Backend using Node.js, Express.js, PostgreSQL, and Drizzle ORM that allows users to securely generate and manage shortened URLs with JWT-based authentication and salted password hashing. The project includes RESTful APIs for user registration, login, URL shortening, and redirection, along with relational database design using PostgreSQL foreign key relationships. I also integrated Docker for containerized backend and database setup, used Zod for request validation, and NanoID for generating unique short codes, making the system scalable, secure, and deployment-ready.</p>
+                    <a href="https://github.com/sandeshpawar10/URL-Shortner-Project" target="_blank" class="check-it-btn">Check it Out</a>
+                </div>
+
+                <!-- 5TH PROJECT -->
+                 <div class="main-project">
+                    <h3 id="project-name">MOVIE BOOKING WEB APP</h3>
+                    <h2 class="skill-tags node">Node js</h2>
+                    <h2 class="skill-tags express">Express</h2>
+                    <h2 class="skill-tags Mongo">Mongo DB</h2>
+                    <h2 class="skill-tags LeafLet">LeafLet</h2>
+                    <p id="descriptio">A full-stack Movie Booking System web application that allows users to browse movies, select theatres and show timings, choose seats in real time, and securely book tickets through an integrated online payment gateway. The platform provides a smooth and interactive booking experience with dynamic seat management, user authentication, and admin controls for managing movies and shows. The project is built using modern web technologies with a scalable backend, database integration, and Razorpay payment support, making it a complete real-world cinema ticket booking solution.</p>
+                    <a href="https://github.com/sandeshpawar10/Movie-Booking-App/tree/main" target="_blank" class="check-it-btn">Check it Out</a>
+                </div>
+
+            </div>
+
+            <div class="other-hobbies">
+            <h3 id="about-title">Other Hobies</h3>
+                <div class="main-project">
+                    <h3 id="project-name">🏃🏃MARATHON 🏃🏃</h3>
+                    <p id="descriptio">Marathon running is one of my key hobbies and has played an important role in building my discipline, stamina, and mental resilience. Through regular training and participation in competitive events, I have achieved a personal best of 10 km in 49 minutes. One of my proudest achievements was securing 3rd rank in the Kolhapur Ruggedian Marathon (2019), a challenging endurance race that tested both physical strength and determination. Running helps me stay focused, energetic, and motivated in both my personal and professional life.</p>
+                    <img src="WhatsApp Image 2026-01-02 at 12.48.44 AM.jpeg" alt="">
+                    <img src="WhatsApp Image 2026-01-02 at 12.48.36 AM.jpeg" alt="">
+                    <!-- <img src="LKMM_050120_ATHARVA_(619).jpeg" alt=""> -->
+                    <img src="LKMM_050120_SHREYASH_(479).jpeg" alt="">
+                    <a href="https://www.townscript.com/e/ruggedian-kolhapur-run-2019-ultra-marathon-123041/results?bib=E10689" target="_blank" class="check-it-btn">Check My Record</a>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <!-- contact -->
+        <div class="contact-section">
+            <h3 id="email">Email: <span>sandeshpawar2232@gmail.com</span></h3>
+            <h3 id="phone">Contact Number: <span>2873642846294</span></h3>
+        </div>
+
+        <!-- connecttions -->
+        <div class="connecttions">
+            <a href="https://github.com/sandeshpawar10" target="_blank">
+                <img src="github-logo.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/sandeshpawar__10/?__pwa=1" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/sandesh-pawar-85669832b/" target="_blank">
+                <img src="linkedin.png" alt="Linkdin">
+            </a>            
+        </div>
+
+        <script src="script.js">
+
+        </script>
+    </div>
+</body>
+</html>

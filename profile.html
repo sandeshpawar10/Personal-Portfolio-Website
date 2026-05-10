@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandesh Pawar - Backend Developer Portfolio. Skilled in C++, Node.js, Express, and more.">
+    <meta name="author" content="Sandesh Pawar">
+    <title>Sandesh Pawar Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Floating Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- photo section vertical left side image-->
+        <section class="photo animate">
+            <img src="public\image.png" alt="Sandesh Pawar Profile Picture">
+        </section>
+
+        <!-- hero section -->
+        <header id="hero" class="user-card animate">
+            <h1 id="main-name">Sandesh Pawar</h1>
+            <h4 id="passion">Backend Developer</h4> 
+            <div class="hero-btns">
+                <a href="public\sandeshresume_template.pdf" class="btn-download"><i class="fas fa-download"></i> Resume</a>
+                <a href="#contact" class="btn-contact">Get In Touch</a>
+            </div>
+        </header>
+
+        <!-- self information -->
+        <main class="self-card">
+            <!-- about section -->
+            <section id="about" class="about animate">
+                <h3 class="section-title">About Me</h3>
+                <p class="about-text">   I am Sandesh Pawar and I am from Maharashtra. 
+                                Currently I am in 2nd year in CSE DEPARTMENT in BANGALORE INSTITUTE OF TECHNOLOGY. 
+                                I am passionate about learning new things in the field of technology, especially programming and web development. 
+                                I have basic knowledge of C++, HTML, CSS, and JavaScript, and I enjoy practicing these skills through small projects and experiments. 
+                                I also participated in a hackathon project that aimed to help small businesses and artisans in India through technology, which helped me improve my teamwork and problem-solving skills. I always try to learn and grow every day so that I can achieve my goals and build a successful career in the IT field. I believe that with hard work and dedication, I can make a positive impact in the future.
+                </p>
+            </section>
+
+            <!-- skills part should be below the about -->
+            <section id="skills" class="skills animate">
+                <h3 class="section-title">My Technical Skills</h3>
+                
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag c" data-info="C is a powerful general-purpose programming language, used for operating systems and embedded systems.">C</button>
+                        <!-- <span class="skill-percentage">80%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress c-fill"></div>
+                    </div> -->
+                </div>
+                
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag cpp" data-info="C++ is an extension of C that adds object-oriented features, widely used for high-performance applications.">C++</button>
+                        <!-- <span class="skill-percentage">80%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress cpp-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag java" data-info="Java is a high-level, object-oriented programming language used to build web apps, mobile apps, desktop software, and enterprise systems.">Java</button>
+                        <!-- <span class="skill-percentage">80%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress c-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag html" data-info="HTML (HyperText Markup Language) is the standard markup language for creating web pages.">HTML</button>
+                        <!-- <span class="skill-percentage">100%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress html-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag css" data-info="CSS (Cascading Style Sheets) is used for describing the presentation of a document written in HTML.">CSS</button>
+                        <!-- <span class="skill-percentage">50%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress css-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag js" data-info="JavaScript is a versatile programming language that enables interactive web pages and backend logic.">JavaScript</button>
+                        <!-- <span class="skill-percentage">90%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress javascript-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag node" data-info="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development.">Node Js</button>
+                        <!-- <span class="skill-percentage">60%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress node-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag express" data-info="Express.js is a minimal and flexible Node.js web application framework.">Express</button>
+                        <!-- <span class="skill-percentage">60%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress exp-fill"></div>
+                    </div> -->
+                </div>
+                <div class="skill-wrapper">
+                    <div class="skill-info">
+                        <button class="skill-tag MongoDB" data-info="MongoDB is a NoSQL database that stores data in flexible JSON-like documents instead of tables.
+It is commonly used in modern web applications with Node.js and the MERN stack.">MongoDB</button>
+                        <!-- <span class="skill-percentage">100%</span> -->
+                    </div>
+                    <!-- <div class="progress-bar">
+                        <div class="progress html-fill"></div>
+                    </div> -->
+                </div>
+            </section>
+
+
+
+
+            <!-- <div class="skils animate">
+                <h3 id="about-title">My Technical Skills</h3>
+                <h2 class="skill-tag cpp">C++</h2>
+                <h2 class="skill-tag c">c</h2>
+                <h2 class="skill-tag html">HTML</h2>
+                <h2 class="skill-tag css">CSS</h2>
+                <h2 class="skill-tag js">JavaScript</h2>
+                <h2 class="skill-tag node">Node Js</h2>
+                <h2 class="skill-tag express">Express</h2>
+            </div> -->
+
+            <section id="projects" class="projects">
+                <h3 class="section-title">Projects</h3>
+                
+                <div class="project-grid">
+                    <!-- 1st project -->
+                    <div class="project-card animate">
+                        <div class="project-header">
+                            <h3 class="project-name">LEETCODE METRICS APP</h3>
+                            <div class="project-tags">
+                                <span class="skill-tags html">HTML</span>
+                                <span class="skill-tags css">CSS</span>
+                                <span class="skill-tags js">JavaScript</span>
+                            </div>
+                        </div>
+                        <p class="description">LeetMatric is a JavaScript-based web application that fetches and visualizes a user’s LeetCode problem-solving statistics. It uses the LeetCode GraphQL API to display difficulty-wise progress through interactive circular charts.</p>
+                        <a href="https://github.com/sandeshpawar10/LeetCode-Matrics-App" target="_blank" class="check-it-btn">View on GitHub</a>
+                    </div>
+
+                    <!-- 2nd project -->
+                    <div class="project-card animate">
+                        <div class="project-header">
+                            <h3 class="project-name">MOVIE SEARCH APP</h3>
+                            <div class="project-tags">
+                                <span class="skill-tags html">HTML</span>
+                                <span class="skill-tags css">CSS</span>
+                                <span class="skill-tags js">JavaScript</span>
+                            </div>
+                        </div>
+                        <p class="description">Allows users to search for movies and view detailed information in real time. The app fetches data from the TMDB API and displays movie details with filters for Hollywood and Bollywood.</p>
+                        <a href="https://github.com/sandeshpawar10/Movie-Info-Project" target="_blank" class="check-it-btn">View on GitHub</a>
+                    </div>
+
+                    <!-- 3rd project -->
+                    <div class="project-card animate">
+                        <div class="project-header">
+                            <h3 class="project-name">BOOKSTORE API DRIZZLE</h3>
+                            <div class="project-tags">
+                                <span class="skill-tags node">Node js</span>
+                                <span class="skill-tags express">Express</span>
+                            </div>
+                        </div>
+                        <p class="description">The Bookstore REST API is a backend application built using Node.js, Express, Drizzle ORM, and PostgreSQL, designed to manage books and authors with proper relational database principles. The project implements UUID-based primary keys, foreign key relationships, and referential integrity, ensuring that every book is associated with a valid author.</p>
+                        <a href="https://github.com/sandeshpawar10/Bookstore-Api-Drizzle-Project/tree/main" target="_blank" class="check-it-btn">View on GitHub</a>
+                    </div>
+
+                    <!-- 4th project -->
+                    <div class="project-card animate">
+                        <div class="project-header">
+                            <h3 class="project-name">URL SHORTENER</h3>
+                            <div class="project-tags">
+                                <span class="skill-tags node">Node Js</span>
+                                <span class="skill-tags express">Express</span>
+                                <span class="skill-tags pg">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <p class="description">I developed a production-ready URL Shortener Backend using Node.js, Express.js, PostgreSQL, and Drizzle ORM that allows users to securely generate and manage shortened URLs with JWT-based authentication and salted password hashing. The project includes RESTful APIs for user registration, login, URL shortening, and redirection, along with relational database design using PostgreSQL foreign key relationships. I also integrated Docker for containerized backend and database setup, used Zod for request validation, and NanoID for generating unique short codes, making the system scalable, secure, and deployment-ready.</p>
+                        <a href="https://github.com/sandeshpawar10/URL-Shortner-Project" target="_blank" class="check-it-btn">View on GitHub</a>
+                    </div>
+
+                    <!-- 5TH PROJECT -->
+                    <div class="project-card animate">
+                        <div class="project-header">
+                            <h3 class="project-name">MOVIE BOOKING WEB APP</h3>
+                            <div class="project-tags">
+                                <span class="skill-tags node">Node js</span>
+                                <span class="skill-tags express">Express</span>
+                                <span class="skill-tags mongo">MongoDB</span>
+                            </div>
+                        </div>
+                        <p class="description">A full-stack Movie Booking System web application that allows users to browse movies, select theatres and show timings, choose seats in real time, and securely book tickets through an integrated online payment gateway. The platform provides a smooth and interactive booking experience with dynamic seat management, user authentication, and admin controls for managing movies and shows. The project is built using modern web technologies with a scalable backend, database integration, and Razorpay payment support, making it a complete real-world cinema ticket booking solution.</p>
+                        <a href="https://github.com/sandeshpawar10/Movie-Booking-App/tree/main" target="_blank" class="check-it-btn">View on GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hobbies" class="hobbies animate">
+                <h3 class="section-title">Other Hobbies</h3>
+                <div class="hobby-card">
+                    <h3 class="hobby-name">🏃 Marathon Runner</h3>
+                    <p class="description">Marathon running is one of my key hobbies and has played an important role in building my discipline, stamina, and mental resilience. Personal best: 10 km in 49 minutes. Secured 3rd rank in Kolhapur Ruggedian Marathon (2019).</p>
+                    <div class="hobby-gallery">
+                        <img src="public\WhatsApp Image 2026-01-02 at 12.48.44 AM.jpeg" alt="Marathon Image 1">
+                        <img src="public\WhatsApp Image 2026-01-02 at 12.48.36 AM.jpeg" alt="Marathon Image 2">
+                        <img src="public\LKMM_050120_SHREYASH_(479).jpeg" alt="Marathon Image 3">
+                    </div>
+                    <a href="https://www.townscript.com/e/ruggedian-kolhapur-run-2019-ultra-marathon-123041/results?bib=E10689" target="_blank" class="check-it-btn">View My Record</a>
+                </div>
+
+            </section>
+        </main>
+
+        
+
+
+
+        <!-- contact -->
+        <footer id="contact" class="contact-section">
+            <h3 class="section-title">Get In Touch</h3>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i><a href="mailto:sandeshpawar2232@gmail.com"> <span>sandeshpawar2232@gmail.com</span></a></p>
+                </div>
+                <!-- connections -->
+                <div class="connections">
+                    <a href="https://github.com/sandeshpawar10" target="_blank" title="GitHub">
+                        <img src="public\github-logo.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.instagram.com/sandeshpawar__10/?__pwa=1" target="_blank" title="Instagram">
+                        <img src="public\instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sandesh-pawar-85669832b/" target="_blank" title="LinkedIn">
+                        <img src="public\linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://leetcode.com/u/sandeshpawar/" target="_blank" title="LeetCode">
+                        <img src="public\leercode logo white.jpg" alt="LeetCode">
+                    </a>            
+                </div>
+            </div>
+        </footer>
+
+        <!-- Tooltip Element -->
+        <div id="tooltip" class="tooltip"></div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

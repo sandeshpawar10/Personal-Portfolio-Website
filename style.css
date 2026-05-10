@@ -1,0 +1,587 @@
+/* ===== RESET & ROOT VARIABLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+}
+
+:root {
+    --bg-dark: #050505;
+    --card-bg: rgba(20, 20, 20, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f8f9fa;
+    --text-dim: #9ca3af;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.4);
+    --secondary: #8b5cf6;
+    --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --nav-height: 70px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 90%;
+    height: 60px;
+    padding: 0 30px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid transparent; /* Prevents layout shift */
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 12px var(--accent-glow);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.nav-links a:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    min-height: 100vh;
+}
+
+.photo {
+    position: fixed;
+    left: 0;
+    top: var(--nav-height);
+    width: 35%;
+    height: calc(100vh - var(--nav-height));
+    z-index: 10;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* Ensures head isn't cut off */
+    filter: grayscale(20%) contrast(1.1);
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.photo:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.user-card, .self-card, .contact-section {
+    grid-column: 2;
+    padding: 120px 80px; /* Increased padding for better section spacing */
+}
+
+/* Ensure all main sections have consistent vertical spacing */
+section, header, footer {
+    margin-bottom: 40px;
+}
+
+/* ===== HERO SECTION ===== */
+.user-card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+#main-name {
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    width: fit-content;
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 4px solid var(--accent);
+    
+    /* Continuous Typing Animation */
+    animation: 
+        continuousTyping 6s steps(13, end) infinite,
+        blink 0.8s step-end infinite;
+}
+
+@keyframes continuousTyping {
+    0%, 10% { width: 0; }
+    40%, 60% { width: 100%; }
+    90%, 100% { width: 0; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent); }
+}
+
+#passion {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-dim);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    opacity: 0;
+    
+    /* Simple Animation */
+    animation: 
+        fadeInUp 1s ease-out forwards 0.5s,
+        breatheLetter 8s ease-in-out infinite 1.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity:0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes breatheLetter {
+    0%, 100% { letter-spacing: 4px; opacity: 0.8; }
+    50% { letter-spacing: 7px; opacity: 1; color: var(--accent); }
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-download, .btn-contact {
+    padding: 14px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.check-it-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.btn-download {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.btn-contact {
+    background: var(--glass-bg);
+    color: var(--text-main);
+    border: 1px solid var(--glass-border);
+}
+
+.check-it-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid var(--glass-border);
+    margin-top: 15px;
+}
+
+.btn-download:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+.btn-contact:hover {
+    background: var(--glass-border);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.check-it-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid var(--accent);
+}
+
+/* ===== COMMON SECTION STYLES ===== */
+.about, .skills, .projects, .hobbies {
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    margin-bottom: 80px; /* Consistent spacing between sections */
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-text {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 90%;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+    /* Styles inherited from common section styles */
+}
+
+.skill-wrapper {
+    margin-bottom: 30px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skill-tag {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
+}
+
+/* ===== PROJECTS GRID ===== */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-name {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.description {
+    color: var(--text-dim);
+    font-size: 18px;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* ===== HOBBIES SECTION ===== */
+/* .hobbies animate{
+    margin-top: 10%;
+} */
+.hobby-card {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.hobby-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.hobby-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.hobby-gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* ===== FOOTER & CONTACT ===== */
+.contact-section {
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-dim);
+}
+
+.contact-info i {
+    width: 30px;
+    color: var(--accent);
+}
+
+.connections {
+    display: flex;
+    gap: 20px;
+}
+
+.connections img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(1) invert(1) opacity(0.6);
+    transition: all 0.3s ease;
+}
+
+.connections img:hover {
+    filter: grayscale(0) invert(0) opacity(1) drop-shadow(0 0 10px var(--accent-glow));
+    transform: translateY(-5px) scale(1.2);
+}
+
+/* ===== TOOLTIP ===== */
+.tooltip {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 17px;
+    max-width: 250px;
+    z-index: 2000;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ANIMATIONS ===== */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .container { grid-template-columns: 1fr; }
+    .photo { 
+        position: relative; 
+        width: 100%; 
+        height: auto; 
+        min-height: 350px;
+        top: 0; 
+        margin-top: 140px; 
+        background: var(--bg-dark);
+        overflow: visible;
+    }
+    .photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: top center;
+    }
+    .user-card, .self-card, .contact-section { 
+        grid-column: 1; 
+        padding: 40px 20px; 
+    }
+    .nav-links { gap: 15px; }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        height: auto;
+        min-height: 50px;
+        padding: 10px 20px;
+        top: 10px;
+    }
+    .nav-links { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 8px 15px; 
+    }
+    .nav-links a {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    .photo {
+        height: 50vh;
+        margin-top: 110px;
+    }
+    .user-card {
+        min-height: auto;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+    #main-name {
+        font-size: clamp(32px, 10vw, 48px);
+        white-space: normal; /* Allow name to wrap if needed on mobile */
+        border-right: none;
+        animation: none; /* Disable typing animation on very small screens for better UX */
+        width: 100%;
+        -webkit-text-fill-color: initial;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    #passion {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .btn-download, .btn-contact {
+        width: 100%;
+    }
+    .hobby-gallery { grid-template-columns: 1fr; }
+    .contact-grid { flex-direction: column; gap: 30px; align-items: center; text-align: center; }
+}
