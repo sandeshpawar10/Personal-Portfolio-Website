@@ -164,35 +164,46 @@ section, header, footer {
     50% { border-color: var(--accent); }
 }
 
+@keyframes shine {
+  0% {
+    background-position: 150% center;
+  }
+  100% {
+    background-position: -50% center;
+  }
+}
+
 #passion {
     font-size: 20px;
     font-weight: 400;
-    color: var(--text-dim);
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 40px;
     opacity: 0;
+    display: inline-block;
     
-    /* Simple Animation */
+    /* Shiny Text Properties */
+    background: linear-gradient(120deg, var(--text-dim) 0%, var(--text-dim) 35%, #ffffff 50%, var(--text-dim) 65%, var(--text-dim) 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animations */
     animation: 
         fadeInUp 1s ease-out forwards 0.5s,
-        breatheLetter 8s ease-in-out infinite 1.5s;
+        shine 4s linear infinite 1.5s;
 }
 
 @keyframes fadeInUp {
     from {
-        opacity:0;
+        opacity: 0;
         transform: translateY(15px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-@keyframes breatheLetter {
-    0%, 100% { letter-spacing: 4px; opacity: 0.8; }
-    50% { letter-spacing: 7px; opacity: 1; color: var(--accent); }
 }
 
 .hero-btns {
@@ -371,7 +382,27 @@ section, header, footer {
 .project-name {
     font-size: 23px;
     margin-bottom: 15px;
-    color: var(--accent);
+    display: inline-block;
+    
+    /* Gradient Text Properties */
+    background: linear-gradient(to right, #3b82f6, #ebe0eb, #3b82f6);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animation */
+    animation: projectGradient 8s linear infinite alternate; 
+}
+
+@keyframes projectGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .project-tags {
@@ -565,7 +596,7 @@ section, header, footer {
         border-right: none;
         animation: none; /* Disable typing animation on very small screens for better UX */
         width: 100%;
-        -webkit-text-fill-color: initial;
+        -webkit-text-fill-color: transparent;
         background: var(--gradient);
         -webkit-background-clip: text;
         color: transparent;
